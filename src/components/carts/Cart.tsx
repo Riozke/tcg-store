@@ -6,7 +6,6 @@ import { Badge } from "../ui/badge";
 import {
   Sheet,
   SheetContent,
-  SheetDescription,
   SheetHeader,
   SheetTitle,
   SheetTrigger,
@@ -28,7 +27,7 @@ export const Cart = () => {
   const [showSheet, setShowSheet] = useState(false);
   const [isMounted, setIsMounted] = useState(false);
 
-  const handleRovomeItemFromCart = (item: CartItem) => {
+  const handleRemoveItemFromCart = (item: CartItem) => {
     removeFromCart(item.id);
     showToast("Item Removed from Cart", item?.images[0] as string, item.name);
   };
@@ -63,68 +62,66 @@ export const Cart = () => {
           <SheetHeader>
             <SheetTitle>Shopping Cart</SheetTitle>
             <Separator />
-            <SheetDescription className="flex items-start justify-between gap-4 flex-col h-[90vh]">
-              <div className="overflow-y-auto">
-                {/* cart items here */}
-                {cartItems.map((item) => (
-                  <div
-                    key={item.id}
-                    className="flex items-center justify-start gap-2 p-2
-                      mt-2 border-b-2 border-t-gray-500"
-                  >
-                    <Image
-                      className="rounded-full object-contain"
-                      src={item?.images && item?.images[0]}
-                      alt="product iamge"
-                      width={70}
-                      height={70}
-                    />
-                    <div className="space-y-2">
-                      <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-2">
-                        <h2>{item.name.slice(0, 50)}...</h2>
-                      </div>
+          </SheetHeader>
 
-                      <div className="flex items-center justify-between">
-                        <p className="text-lg border border-green-500 px-2 rounded-md text-green-500">
-                          ${item.price}
-                        </p>
-                        <p className="text-lg">Qty : {item.quantity}</p>
-                        <Button
-                          onClick={() => handleRovomeItemFromCart(item)}
-                          variant={"destructive"}
-                          size={"sm"}
-                          className="rounded-full"
-                        >
-                          <X />
-                        </Button>
-                      </div>
+          <div className="flex items-start justify-between gap-4 flex-col h-[90vh]">
+            <div className="overflow-y-auto">
+              {cartItems.map((item) => (
+                <div
+                  key={item.id}
+                  className="flex items-center justify-start gap-2 p-2 mt-2 border-b-2 border-t-gray-500"
+                >
+                  <Image
+                    className="rounded-full object-contain"
+                    src={item?.images && item?.images[0]}
+                    alt="product image"
+                    width={70}
+                    height={70}
+                  />
+                  <div className="space-y-2">
+                    <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-2">
+                      <h2>{item.name.slice(0, 50)}...</h2>
+                    </div>
+
+                    <div className="flex items-center justify-between">
+                      <p className="text-lg border border-green-500 px-2 rounded-md text-green-500">
+                        ${item.price}
+                      </p>
+                      <p className="text-lg">Qty : {item.quantity}</p>
+                      <Button
+                        onClick={() => handleRemoveItemFromCart(item)}
+                        variant="destructive"
+                        size="sm"
+                        className="rounded-full"
+                      >
+                        <X />
+                      </Button>
                     </div>
                   </div>
-                ))}
+                </div>
+              ))}
+            </div>
+
+            <div className="w-full">
+              <div className="flex items-center justify-between gap-2">
+                <h3 className="text-xl text-center font-semibold">
+                  Your Subtotal :
+                </h3>
+                <p className="text-xl text-center font-bold text-green-500">
+                  $ {formatPrice(getTotalPrice())}
+                </p>
               </div>
 
-              {/* subtotal and buttons here */}
-              <div className="w-full">
-                <div className="flex items-center justify-between gap-2">
-                  <h3 className="text-xl text-center font-semibold">
-                    Your Subtotal :
-                  </h3>
-                  <p className="text-xl text-center font-bold text-green-500">
-                    $ {formatPrice(getTotalPrice())}
-                  </p>
-                </div>
-
-                <Separator className="!my-2" />
-                <div
-                  className="flex flex-col items-center !my-2"
-                  onClick={() => setShowSheet(false)}
-                >
-                  <ViewCart />
-                  <CheckoutBtn />
-                </div>
+              <Separator className="!my-2" />
+              <div
+                className="flex flex-col items-center !my-2"
+                onClick={() => setShowSheet(false)}
+              >
+                <ViewCart />
+                <CheckoutBtn />
               </div>
-            </SheetDescription>
-          </SheetHeader>
+            </div>
+          </div>
         </SheetContent>
       </Sheet>
     </div>
