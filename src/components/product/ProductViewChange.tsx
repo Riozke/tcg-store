@@ -17,7 +17,7 @@ interface ProductViewChangeProps {
   setListView: (value: boolean) => void;
 }
 
-const ProductViewChange = ({
+export const ProductViewChange = ({
   itemPerPage,
   totalPages,
   listView,
@@ -79,5 +79,3 @@ const ProductViewChange = ({
     </div>
   );
 };
-
-export default ProductViewChange;

@@ -2,9 +2,9 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { productsData } from "@/data/products/productsData";
 
 import React from "react";
-import SingleProductCartView from "../product/SingleProductCartView";
+import { SingleProductCartView } from "../product/SingleProductCartView";
 
-const ProductsCollectionTwo = () => {
+export const ProductsCollectionTwo = () => {
   //get products data from server here based on the category or tab value
   const data = productsData;
 
@@ -53,5 +53,3 @@ const ProductsCollectionTwo = () => {
     </section>
   );
 };
-
-export default ProductsCollectionTwo;

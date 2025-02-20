@@ -3,15 +3,15 @@
 import React, { useEffect, useState } from "react";
 import { BuyNowBtn } from "../buttons/BuyNowBtn";
 import { AddToCartBtn } from "../buttons/AddToCartBtn";
-import ProductDescription from "../product/ProductDescription";
+import { ProductDescription } from "../product/ProductDescription";
 import { RatingReview } from "../others/RatingReview";
-import ProductGallery from "../product/ProductGallery";
+import { ProductGallery } from "../product/ProductGallery";
 import { useProductQuickViewStore } from "@/store/productQuickViewStore";
 import { Button } from "../ui/button";
 import { X } from "lucide-react";
-import ProductColorSelection from "../product/ProductColorSelection";
-import ProductQuantityChange from "../product/ProductQuantityChange";
-import ProductTab from "../product/ProductTab";
+import { ProductColorSelection } from "../product/ProductColorSelection";
+import { ProductQuantityChange } from "../product/ProductQuantityChange";
+import { ProductTab } from "../product/ProductTab";
 import { calculateDiscount } from "@/lib/calculateDiscount";
 
 export const ProductQuickViewModal = () => {

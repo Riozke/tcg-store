@@ -9,7 +9,10 @@ interface ProductTabsProps {
   reviews?: Review[];
 }
 
-const ProductTab = ({ aboutItem = [], reviews = [] }: ProductTabsProps) => {
+export const ProductTab = ({
+  aboutItem = [],
+  reviews = [],
+}: ProductTabsProps) => {
   return (
     <div>
       <Tabs defaultValue="aboutitem" className="w-full p-4 -mt-2 ">
@@ -68,5 +71,3 @@ const ProductTab = ({ aboutItem = [], reviews = [] }: ProductTabsProps) => {
     </div>
   );
 };
-
-export default ProductTab;

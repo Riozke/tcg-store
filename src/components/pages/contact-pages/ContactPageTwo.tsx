@@ -1,10 +1,7 @@
 import { ContactForm } from "@/components/forms/ContactForm";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
 import React from "react";
 
-const ContactPageTwo = () => {
+export const ContactPageTwo = () => {
   return (
     <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 py-16 bg-slate-100 dark:bg-slate-900">
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -48,5 +45,3 @@ const ContactPageTwo = () => {
     </div>
   );
 };
-
-export default ContactPageTwo;

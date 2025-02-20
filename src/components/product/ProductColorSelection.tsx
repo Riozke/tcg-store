@@ -1,19 +1,22 @@
-
 import React from "react";
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "../ui/tooltip";
-import { colors } from "@/data/products/productColor";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "../ui/tooltip";
 import { cn } from "@/lib/utils";
 
 interface ProductColorSelectionProps {
   color: string;
   setColor: (value: string) => void;
-  allColors: string[]
+  allColors: string[];
 }
 
-const ProductColorSelection = ({
+export const ProductColorSelection = ({
   color: selectedColor,
   setColor,
-  allColors
+  allColors,
 }: ProductColorSelectionProps) => {
   return (
     <div>
@@ -42,5 +45,3 @@ const ProductColorSelection = ({
     </div>
   );
 };
-
-export default ProductColorSelection;

@@ -1,4 +1,5 @@
 "use client";
+
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import React, { useState } from "react";
@@ -8,7 +9,7 @@ interface ProductGalleryProps {
   isInModal: boolean;
 }
 
-const ProductGallery = ({ images, isInModal }: ProductGalleryProps) => {
+export const ProductGallery = ({ images, isInModal }: ProductGalleryProps) => {
   const [selectedImage, setSelectedImage] = useState(images[0]);
 
   const handleImageSelection = (image: string) => {
@@ -36,7 +37,10 @@ const ProductGallery = ({ images, isInModal }: ProductGalleryProps) => {
         {images.map((image) => (
           <Image
             onClick={() => handleImageSelection(image)}
-            className={cn("rounded-md object-cover border", image === selectedImage && 'ring-2')}
+            className={cn(
+              "rounded-md object-cover border",
+              image === selectedImage && "ring-2"
+            )}
             src={image}
             alt="product"
             key={image}
@@ -48,5 +52,3 @@ const ProductGallery = ({ images, isInModal }: ProductGalleryProps) => {
     </div>
   );
 };
-
-export default ProductGallery;

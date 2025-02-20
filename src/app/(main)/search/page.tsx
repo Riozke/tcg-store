@@ -1,6 +1,6 @@
 import { BreadcrumbComponent } from "@/components/others/Breadcrumb";
-import SingleProductCartView from "@/components/product/SingleProductCartView";
-import SingleProductListView from "@/components/product/SingleProductListView";
+import { SingleProductCartView } from "@/components/product/SingleProductCartView";
+import { SingleProductListView } from "@/components/product/SingleProductListView";
 import { productsData } from "@/data/products/productsData";
 import Link from "next/link";
 

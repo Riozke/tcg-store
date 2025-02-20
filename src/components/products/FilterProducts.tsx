@@ -1,4 +1,5 @@
 "use client";
+
 import React, { useEffect, useState } from "react";
 import { Separator } from "../ui/separator";
 import { Input } from "../ui/input";
@@ -10,7 +11,7 @@ import { Button } from "../ui/button";
 import { colors } from "@/data/products/productColor";
 import { dummyCategories } from "@/data/category/categoryData";
 
-const FilterProducts = () => {
+export const FilterProducts = () => {
   // State variables for filters
   const [minValue, setMinValue] = useState(10);
   const [maxValue, setMaxValue] = useState(5000);
@@ -212,5 +213,3 @@ const FilterProducts = () => {
     </aside>
   );
 };
-
-export default FilterProducts;

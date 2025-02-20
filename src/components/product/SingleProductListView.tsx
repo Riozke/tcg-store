@@ -1,4 +1,5 @@
 "use client";
+
 import React from "react";
 import { RatingReview } from "../others/RatingReview";
 import Link from "next/link";
@@ -8,7 +9,7 @@ import { AddToCartBtn } from "../buttons/AddToCartBtn";
 import { Product } from "@/types/types";
 import { calculateDiscount } from "@/lib/calculateDiscount";
 
-const SingleProductListView = ({ product }: { product: Product }) => {
+export const SingleProductListView = ({ product }: { product: Product }) => {
   const { category, discount, id, images, name, price, rating, reviews } =
     product;
 
@@ -56,5 +57,3 @@ const SingleProductListView = ({ product }: { product: Product }) => {
     </Link>
   );
 };
-
-export default SingleProductListView;

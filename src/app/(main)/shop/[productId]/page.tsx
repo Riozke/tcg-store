@@ -1,9 +1,9 @@
-import ProductGallery from "@/components/product/ProductGallery";
+import { ProductGallery } from "@/components/product/ProductGallery";
 import { productsData } from "@/data/products/productsData";
 import React from "react";
-import RelatedProducts from "@/components/products/RelatedProducts";
+import { RelatedProducts } from "@/components/products/RelatedProducts";
 import { BreadcrumbComponent } from "@/components/others/Breadcrumb";
-import ProductDetails from "@/components/product/ProductDetails";
+import { ProductDetails } from "@/components/product/ProductDetails";
 
 // Define the props interface for the component
 interface ProductIdPageProps {

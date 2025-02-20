@@ -1,6 +1,6 @@
 import React from "react";
-import ProductGallery from "@/components/product/ProductGallery";
-import ProductDetails from "@/components/product/ProductDetails";
+import { ProductGallery } from "@/components/product/ProductGallery";
+import { ProductDetails } from "@/components/product/ProductDetails";
 import { productsData } from "@/data/products/productsData";
 import { BreadcrumbComponent } from "@/components/others/Breadcrumb";
 

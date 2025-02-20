@@ -5,7 +5,7 @@ import { BreadcrumbComponent } from "@/components/others/Breadcrumb";
 import { Separator } from "@/components/ui/separator";
 import React from "react";
 
-const CartPageOne = () => {
+export const CartPageOne = () => {
   return (
     <section className="p-4 md:p-8  bg-white dark:bg-gray-800">
       <div className="max-w-screen-xl mx-auto">
@@ -27,5 +27,3 @@ const CartPageOne = () => {
     </section>
   );
 };
-
-export default CartPageOne;

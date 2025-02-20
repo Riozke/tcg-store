@@ -5,7 +5,7 @@ import { StatisticsCard } from "@/components/dashboard/statistics/StatisticsCard
 import { Activity, DollarSign, ShoppingBag, Users } from "lucide-react";
 import React from "react";
 
-const DashboardPageOne = () => {
+export const DashboardPageOne = () => {
   return (
     <section className="max-w-screen-xl mx-auto py-4">
       <div className="grid gap-2 lg:gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
@@ -41,5 +41,3 @@ const DashboardPageOne = () => {
     </section>
   );
 };
-
-export default DashboardPageOne;

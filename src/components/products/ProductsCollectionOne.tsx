@@ -1,11 +1,12 @@
 "use client";
+
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { productsData } from "@/data/products/productsData";
 
 import React, { useEffect, useState } from "react";
-import SingleProductCartView from "../product/SingleProductCartView";
+import { SingleProductCartView } from "../product/SingleProductCartView";
 
-const ProductsCollectionOne = () => {
+export const ProductsCollectionOne = () => {
   const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
@@ -69,5 +70,3 @@ const ProductsCollectionOne = () => {
     </section>
   );
 };
-
-export default ProductsCollectionOne;

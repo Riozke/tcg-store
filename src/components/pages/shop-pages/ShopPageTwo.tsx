@@ -1,5 +1,5 @@
 import { LatestBlogPosts } from "@/components/blog/LatestBlogPosts";
-import ShopPageContainer from "@/components/products/ShopPageContainer";
+import { ShopPageContainer } from "@/components/products/ShopPageContainer";
 import Link from "next/link";
 
 import React from "react";
@@ -16,7 +16,7 @@ interface ShopPageTwoProps {
   };
 }
 
-const ShopPageTwo = ({ searchParams }: ShopPageTwoProps) => {
+export const ShopPageTwo = ({ searchParams }: ShopPageTwoProps) => {
   return (
     <section>
       <div className="p-10 w-full bg-gray-300 dark:bg-gray-800 text-4xl flex items-center justify-center gap-2">
@@ -32,5 +32,3 @@ const ShopPageTwo = ({ searchParams }: ShopPageTwoProps) => {
     </section>
   );
 };
-
-export default ShopPageTwo;

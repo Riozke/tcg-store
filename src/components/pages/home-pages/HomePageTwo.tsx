@@ -7,10 +7,10 @@ import { NewsLetterTwo } from "@/components/newsLetter/NewsLetterTwo";
 import { BenefitsSection } from "@/components/others/BenefitSection";
 import { Loader } from "@/components/others/Loader";
 import { TestimonialsSection } from "@/components/others/Testimonials";
-import ProductsCollectionTwo from "@/components/products/ProductsCollectionTwo";
+import { ProductsCollectionTwo } from "@/components/products/ProductsCollectionTwo";
 import React, { Suspense } from "react";
 
-const HomePageTwo = () => {
+export const HomePageTwo = () => {
   return (
     <div className="overflow-hidden">
       <HeroBannerTwo />
@@ -27,5 +27,3 @@ const HomePageTwo = () => {
     </div>
   );
 };
-
-export default HomePageTwo;

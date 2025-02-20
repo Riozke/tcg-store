@@ -1,11 +1,8 @@
 import { ContactForm } from "@/components/forms/ContactForm";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Locate, Mail, Phone, Plane, PlaneTakeoff } from "lucide-react";
+import { Locate, Mail, Phone } from "lucide-react";
 import React from "react";
 
-const ContactPageOne = () => {
+export const ContactPageOne = () => {
   return (
     <section className="max-w-screen-xl mx-auto p-2 md:p-8">
       <h2 className="text-4xl my-2 font-bold text-center">Get In Touch</h2>
@@ -36,5 +33,3 @@ const ContactPageOne = () => {
     </section>
   );
 };
-
-export default ContactPageOne;

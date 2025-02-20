@@ -1,18 +1,19 @@
 "use client";
+
 import React, { useState } from "react";
 import { Separator } from "../ui/separator";
-import ProductTab from "./ProductTab";
+import { ProductTab } from "./ProductTab";
 import { BuyNowBtn } from "../buttons/BuyNowBtn";
 import { AddToCartBtn } from "../buttons/AddToCartBtn";
-import ProductQuantityChange from "./ProductQuantityChange";
+import { ProductQuantityChange } from "./ProductQuantityChange";
 import { RatingReview } from "../others/RatingReview";
-import ProductDescription from "./ProductDescription";
-import ProductColorSelection from "./ProductColorSelection";
+import { ProductDescription } from "./ProductDescription";
+import { ProductColorSelection } from "./ProductColorSelection";
 import { Product } from "@/types/types";
 import Link from "next/link";
 import { calculateDiscount } from "@/lib/calculateDiscount";
 
-const ProductDetails = ({ product }: { product: Product }) => {
+export const ProductDetails = ({ product }: { product: Product }) => {
   const [quantity, setQuantity] = useState(1);
   const [selectedColor, setSelectedColor] = useState("");
 
@@ -91,5 +92,3 @@ const ProductDetails = ({ product }: { product: Product }) => {
     </div>
   );
 };
-
-export default ProductDetails;

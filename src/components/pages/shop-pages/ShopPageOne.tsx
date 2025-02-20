@@ -1,5 +1,5 @@
-import FilterProducts from "@/components/products/FilterProducts";
-import ShopPageContainer from "@/components/products/ShopPageContainer";
+import { FilterProducts } from "@/components/products/FilterProducts";
+import { ShopPageContainer } from "@/components/products/ShopPageContainer";
 import React, { Suspense } from "react";
 import { Loader } from "@/components/others/Loader";
 
@@ -15,7 +15,7 @@ interface ShopPageOneProps {
   };
 }
 
-const ShopPageOne = ({ searchParams }: ShopPageOneProps) => {
+export const ShopPageOne = ({ searchParams }: ShopPageOneProps) => {
   return (
     <section className="max-w-screen-xl flex gap-2 mx-auto p-2 md:p-8">
       <div className="hidden xl:block w-72">
@@ -27,5 +27,3 @@ const ShopPageOne = ({ searchParams }: ShopPageOneProps) => {
     </section>
   );
 };
-
-export default ShopPageOne;

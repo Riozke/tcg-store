@@ -1,6 +1,5 @@
-import ContactPageOne from '@/components/pages/contact-pages/ContactPageOne'
-import ContactPageTwo from '@/components/pages/contact-pages/ContactPageTwo'
-import React from 'react'
+import { ContactPageTwo } from "@/components/pages/contact-pages/ContactPageTwo";
+import React from "react";
 
 const ContactPage = () => {
   return (
@@ -8,7 +7,7 @@ const ContactPage = () => {
       {/* <ContactPageOne /> */}
       <ContactPageTwo />
     </div>
-  )
-}
+  );
+};
 
-export default ContactPage
+export default ContactPage;

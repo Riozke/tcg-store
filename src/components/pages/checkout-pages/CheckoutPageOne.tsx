@@ -4,7 +4,7 @@ import { CouponCodeForm } from "@/components/forms/CouponCodeForm";
 import { Separator } from "@/components/ui/separator";
 import React from "react";
 
-const CheckoutPageOne = () => {
+export const CheckoutPageOne = () => {
   return (
     <section className="px-4 py-4 lg:px-16  bg-white dark:bg-gray-800">
       <div className="max-w-screen-xl mx-auto">
@@ -33,5 +33,3 @@ const CheckoutPageOne = () => {
     </section>
   );
 };
-
-export default CheckoutPageOne;

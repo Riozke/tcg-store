@@ -6,7 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-const BlogPageTwo = () => {
+export const BlogPageTwo = () => {
   // Sample tags data
   const tags = ["Tech", "Gadgets", "Design", "Fashion", "Travel"];
 
@@ -95,5 +95,3 @@ const BlogPageTwo = () => {
     </div>
   );
 };
-
-export default BlogPageTwo;

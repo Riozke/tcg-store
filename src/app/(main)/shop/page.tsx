@@ -1,5 +1,4 @@
-import ShopPageOne from "@/components/pages/shop-pages/ShopPageOne";
-import ShopPageTwo from "@/components/pages/shop-pages/ShopPageTwo";
+import { ShopPageOne } from "@/components/pages/shop-pages/ShopPageOne";
 import { SearchParams } from "@/types/types";
 import React from "react";
 

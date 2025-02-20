@@ -1,14 +1,15 @@
 "use client";
+
 import React, { useEffect, useState } from "react";
 import { RatingReview } from "../others/RatingReview";
 import Link from "next/link";
 import Image from "next/image";
-import ProductOptions from "./ProductOptions";
+import { ProductOptions } from "./ProductOptions";
 import { Product } from "@/types/types";
 import { calculateDiscount } from "@/lib/calculateDiscount";
 import { useRouter } from "next/navigation";
 
-const SingleProductCartView = ({ product }: { product: Product }) => {
+export const SingleProductCartView = ({ product }: { product: Product }) => {
   const [isMounted, setIsMounted] = useState(false);
 
   const router = useRouter();
@@ -84,5 +85,3 @@ const SingleProductCartView = ({ product }: { product: Product }) => {
     </Link>
   );
 };
-
-export default SingleProductCartView;

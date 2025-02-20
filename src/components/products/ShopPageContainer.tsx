@@ -1,11 +1,12 @@
 "use client";
+
 import React, { Suspense, useEffect, useState } from "react";
-import ProductViewChange from "../product/ProductViewChange";
+import { ProductViewChange } from "../product/ProductViewChange";
 import { productsData } from "@/data/products/productsData";
 import { Pagination } from "../others/Pagination";
-import SingleProductListView from "@/components/product/SingleProductListView";
+import { SingleProductListView } from "@/components/product/SingleProductListView";
 import { Product, SearchParams } from "@/types/types";
-import SingleProductCartView from "../product/SingleProductCartView";
+import { SingleProductCartView } from "../product/SingleProductCartView";
 import { Loader2 } from "lucide-react";
 import { Loader } from "../others/Loader";
 
@@ -14,7 +15,7 @@ interface ShopPageContainerProps {
   gridColumn?: number;
 }
 
-const ShopPageContainer = ({
+export const ShopPageContainer = ({
   searchParams,
   gridColumn,
 }: ShopPageContainerProps) => {
@@ -158,5 +159,3 @@ const ShopPageContainer = ({
     </div>
   );
 };
-
-export default ShopPageContainer;

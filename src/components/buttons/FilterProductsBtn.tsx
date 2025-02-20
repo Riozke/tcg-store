@@ -2,7 +2,7 @@
 
 import React, { Suspense } from "react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import FilterProducts from "../products/FilterProducts";
+import { FilterProducts } from "../products/FilterProducts";
 import { Filter } from "lucide-react";
 import { Loader } from "../others/Loader";
 

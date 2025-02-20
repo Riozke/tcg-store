@@ -1,7 +1,12 @@
 "use client";
+
 import React, { useState } from "react";
 
-const ProductDescription = ({ description }: { description: string }) => {
+export const ProductDescription = ({
+  description,
+}: {
+  description: string;
+}) => {
   const [showMore, setShowMore] = useState(false);
 
   return (
@@ -21,5 +26,3 @@ const ProductDescription = ({ description }: { description: string }) => {
     </div>
   );
 };
-
-export default ProductDescription;

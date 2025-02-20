@@ -7,7 +7,7 @@ interface ProductQuantityChangeProps {
   setQuantity: (qty: number) => void;
 }
 
-const ProductQuantityChange = ({
+export const ProductQuantityChange = ({
   quantity,
   setQuantity,
 }: ProductQuantityChangeProps) => {
@@ -32,5 +32,3 @@ const ProductQuantityChange = ({
     </div>
   );
 };
-
-export default ProductQuantityChange;

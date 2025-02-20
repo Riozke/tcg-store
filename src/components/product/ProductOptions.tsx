@@ -1,4 +1,5 @@
 "use client";
+
 import { Eye, Heart, ShoppingBag } from "lucide-react";
 import React, { useEffect, useState } from "react";
 import {
@@ -14,7 +15,7 @@ import { Product } from "@/types/types";
 import { useProductQuickViewStore } from "@/store/productQuickViewStore";
 import { Loader } from "../others/Loader";
 
-const ProductOptions = ({ product }: { product: Product }) => {
+export const ProductOptions = ({ product }: { product: Product }) => {
   const [isMounted, setIsMounted] = useState(false);
   const { openModal } = useProductQuickViewStore();
   const { images, name } = product;
@@ -97,5 +98,3 @@ const ProductOptions = ({ product }: { product: Product }) => {
     </div>
   );
 };
-
-export default ProductOptions;
