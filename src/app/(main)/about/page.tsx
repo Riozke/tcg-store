@@ -2,7 +2,7 @@ import { NewsLetterTwo } from "@/components/newsLetter/NewsLetterTwo";
 import { AboutPageTwo } from "@/components/pages/about-pages/AboutPageTwo";
 import React from "react";
 
-const AboutPage = () => {
+export default function AboutPage() {
   return (
     <div>
       {/* <AboutPageOne /> */}
@@ -10,6 +10,4 @@ const AboutPage = () => {
       <NewsLetterTwo />
     </div>
   );
-};
-
-export default AboutPage;
+}

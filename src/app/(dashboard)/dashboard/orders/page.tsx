@@ -4,7 +4,7 @@ import { Loader } from "@/components/others/Loader";
 import { Pagination } from "@/components/others/Pagination";
 import React, { Suspense } from "react";
 
-const OrdersPage = () => {
+export const OrdersPage = () => {
   // dummy data for orders
   const orders = [
     {
@@ -111,5 +111,3 @@ const OrdersPage = () => {
     </div>
   );
 };
-
-export default OrdersPage;

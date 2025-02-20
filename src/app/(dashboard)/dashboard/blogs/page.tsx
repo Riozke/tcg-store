@@ -7,7 +7,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { Suspense } from "react";
 
-const BlogsPage = () => {
+export default function BlogsPage() {
   return (
     <div className="max-w-screen-xl w-full my-4 mx-auto p-4">
       <div className="flex justify-between mb-6 gap-2">
@@ -60,6 +60,4 @@ const BlogsPage = () => {
       </Suspense>
     </div>
   );
-};
-
-export default BlogsPage;
+}

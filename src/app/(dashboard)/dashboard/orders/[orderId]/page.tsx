@@ -2,8 +2,7 @@ import { Separator } from "@/components/ui/separator";
 import Image from "next/image";
 import React from "react";
 
-const OrderDetails = () => {
-
+export default function OrderDetails() {
   // get order data based on orderId from the params here
   const order = {
     orderNumber: "ORD123456",
@@ -80,7 +79,6 @@ const OrderDetails = () => {
         </div>
       </div>
 
-      
       <div className="mt-6">
         <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
           Ordered Products
@@ -89,7 +87,9 @@ const OrderDetails = () => {
           {order.products.map((product) => (
             <li key={product.id} className="">
               <div className="flex justify-between items-center !border dark:border-gray-500 px-2 rounded-md ">
-                <p className="text-gray-900 dark:text-white text-lg font-semibold">{product.name}</p>
+                <p className="text-gray-900 dark:text-white text-lg font-semibold">
+                  {product.name}
+                </p>
                 <Image
                   src={product.image}
                   alt="product image"
@@ -116,6 +116,4 @@ const OrderDetails = () => {
       </div>
     </div>
   );
-};
-
-export default OrderDetails;
+}

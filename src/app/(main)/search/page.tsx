@@ -4,11 +4,11 @@ import { SingleProductListView } from "@/components/product/SingleProductListVie
 import { productsData } from "@/data/products/productsData";
 import Link from "next/link";
 
-const SearchComponent = ({
+export default function SearchComponent({
   searchParams,
 }: {
   searchParams: { query: string };
-}) => {
+}) {
   // Filter the products based on the search query
   const foundProducts = productsData.filter((product) =>
     product.name.toLowerCase().includes(searchParams.query.toLowerCase())
@@ -18,7 +18,7 @@ const SearchComponent = ({
     return (
       <div className="text-xl font-medium flex flex-col items-center justify-center h-screen w-full">
         <p className="p-4 text-center">
-          Sorry, no search result found for your query !
+          Sorry, no search result found for your query!
         </p>
         <Link className="p-2 underline text-muted-foreground" href={"/"}>
           Home
@@ -31,7 +31,7 @@ const SearchComponent = ({
     <div className="max-w-screen-xl mx-auto p-4 md:p-8 space-y-2">
       <div className="flex flex-wrap items-center justify-between gap-2 mb-4">
         <BreadcrumbComponent links={["/shop"]} pageText={searchParams.query!} />
-        <p className=" capitalize">
+        <p className="capitalize">
           {foundProducts.length} results found for your search{" "}
           <span className="text-lg font-medium">{searchParams.query}</span>
         </p>
@@ -48,6 +48,4 @@ const SearchComponent = ({
       </div>
     </div>
   );
-};
-
-export default SearchComponent;
+}

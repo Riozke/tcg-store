@@ -2,7 +2,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import React from "react";
 
-const ForgotPasswordPage = () => {
+export default function ForgotPasswordPage() {
   return (
     <div className="flex items-center justify-center min-h-screen bg-gray-100 dark:bg-gray-800">
       <div className="bg-white dark:bg-gray-900 p-8 rounded-lg shadow-md w-full max-w-md">
@@ -38,6 +38,4 @@ const ForgotPasswordPage = () => {
       </div>
     </div>
   );
-};
-
-export default ForgotPasswordPage;
+}

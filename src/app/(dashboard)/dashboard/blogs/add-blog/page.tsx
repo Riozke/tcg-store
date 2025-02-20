@@ -2,7 +2,7 @@ import { AddBlogForm } from "@/components/dashboard/forms/BlogForm";
 import { BreadcrumbComponent } from "@/components/others/Breadcrumb";
 import React from "react";
 
-const AddBlogPage = () => {
+export default function AddBlogPage() {
   return (
     <div className="p-2 w-full">
       <BreadcrumbComponent
@@ -12,6 +12,4 @@ const AddBlogPage = () => {
       <AddBlogForm />
     </div>
   );
-};
-
-export default AddBlogPage;
+}

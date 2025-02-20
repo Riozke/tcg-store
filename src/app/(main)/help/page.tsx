@@ -1,7 +1,7 @@
 import { ContactForm } from "@/components/forms/ContactForm";
 import React from "react";
 
-const HelpPage = () => {
+export default function HelpPage() {
   return (
     <div className="px-4 py-8 lg:px-16 lg:py-12 bg-gray-100 dark:bg-gray-800">
       <div className="max-w-4xl mx-auto">
@@ -32,6 +32,4 @@ const HelpPage = () => {
       </div>
     </div>
   );
-};
-
-export default HelpPage;
+}

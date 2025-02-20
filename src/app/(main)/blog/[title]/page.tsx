@@ -8,7 +8,11 @@ import { AboutMe } from "@/components/blog/AboutMe";
 import { NewsLetterTwo } from "@/components/newsLetter/NewsLetterTwo";
 import { CommentSection } from "@/components/blog/CommentSection";
 
-const BlogTitlePage = ({ params }: { params: { title: string } }) => {
+export default function BlogTitlePage({
+  params,
+}: {
+  params: { title: string };
+}) {
   const title = params.title.split("%20").join(" ");
   const blog = blogPosts.find((item) => item.title === title);
 
@@ -82,6 +86,4 @@ const BlogTitlePage = ({ params }: { params: { title: string } }) => {
       </div>
     </section>
   );
-};
-
-export default BlogTitlePage;
+}

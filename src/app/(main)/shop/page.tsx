@@ -2,7 +2,11 @@ import { ShopPageOne } from "@/components/pages/shop-pages/ShopPageOne";
 import { SearchParams } from "@/types/types";
 import React from "react";
 
-function ShopPage({ searchParams }: { searchParams: SearchParams }) {
+export default function ShopPage({
+  searchParams,
+}: {
+  searchParams: SearchParams;
+}) {
   return (
     <div>
       <ShopPageOne searchParams={searchParams} />
@@ -10,5 +14,3 @@ function ShopPage({ searchParams }: { searchParams: SearchParams }) {
     </div>
   );
 }
-
-export default ShopPage;

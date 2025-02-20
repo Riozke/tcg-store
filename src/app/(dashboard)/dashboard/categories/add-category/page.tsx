@@ -2,7 +2,7 @@ import { CategoryForm } from "@/components/dashboard/forms/CategoryForm";
 import { BreadcrumbComponent } from "@/components/others/Breadcrumb";
 import React from "react";
 
-const AddCategoryPage = () => {
+export default function AddCategoryPage() {
   return (
     <div
       className="p-2 w-full
@@ -15,6 +15,4 @@ const AddCategoryPage = () => {
       <CategoryForm />
     </div>
   );
-};
-
-export default AddCategoryPage;
+}

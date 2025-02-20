@@ -8,7 +8,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { formatPrice } from "@/lib/formatPrice";
 
-const WishlistPage = () => {
+export default function WishlistPage() {
   const [isMounted, setIsMounted] = useState(false);
   const { wishlistItems, removeFromWishlist } = useWishlistStore();
 
@@ -79,6 +79,4 @@ const WishlistPage = () => {
       </div>
     </div>
   );
-};
-
-export default WishlistPage;
+}

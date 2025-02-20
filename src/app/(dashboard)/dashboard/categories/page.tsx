@@ -1,16 +1,18 @@
-import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@/components/ui/popover";
 import { dummyCategories } from "@/data/category/categoryData";
 import { MoreHorizontal } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-const CategoryPage = () => {
-
-
+export default function CategoryPage() {
   return (
     <div className="bg-white dark:bg-gray-800 min-h-screen max-w-screen-xl w-full mx-auto px-4 py-12 m-2 rounded-md">
-      <div >
+      <div>
         <div className="flex items-center justify-between mb-6">
           <h1 className="text-xl font-bold text-gray-900 dark:text-white">
             Browse Categories
@@ -44,7 +46,6 @@ const CategoryPage = () => {
                   {category.description}
                 </p>
                 <div className="mt-4 flex space-x-4">
-                  
                   {/* Horizontal icons */}
                   <Popover>
                     <PopoverTrigger className="">
@@ -67,6 +68,4 @@ const CategoryPage = () => {
       </div>
     </div>
   );
-};
-
-export default CategoryPage;
+}

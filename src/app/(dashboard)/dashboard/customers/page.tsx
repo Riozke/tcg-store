@@ -4,7 +4,7 @@ import { Pagination } from "@/components/others/Pagination";
 import Image from "next/image";
 import React, { Suspense } from "react";
 
-const CustomersPage = () => {
+export default function CustomersPage() {
   // Dummy data for demonstration
   const dummyCustomers = [
     {
@@ -112,6 +112,4 @@ const CustomersPage = () => {
       </Suspense>
     </div>
   );
-};
-
-export default CustomersPage;
+}

@@ -1,13 +1,11 @@
 import { ContactPageTwo } from "@/components/pages/contact-pages/ContactPageTwo";
 import React from "react";
 
-const ContactPage = () => {
+export default function ContactPage() {
   return (
     <div>
       {/* <ContactPageOne /> */}
       <ContactPageTwo />
     </div>
   );
-};
-
-export default ContactPage;
+}

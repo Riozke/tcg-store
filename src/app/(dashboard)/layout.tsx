@@ -2,7 +2,7 @@ import { DashboardHeader } from "@/components/dashboard/header/DashboardHeader";
 import { DashboardSidebar } from "@/components/dashboard/sidebar/DashboardSidebar";
 import React from "react";
 
-const layout = ({ children }: { children: React.ReactNode }) => {
+export default function layout({ children }: { children: React.ReactNode }) {
   return (
     <div>
       <DashboardHeader />
@@ -12,6 +12,4 @@ const layout = ({ children }: { children: React.ReactNode }) => {
       </div>
     </div>
   );
-};
-
-export default layout;
+}

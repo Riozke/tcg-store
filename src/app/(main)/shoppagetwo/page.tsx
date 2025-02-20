@@ -1,17 +1,10 @@
 import { ShopPageTwo } from "@/components/pages/shop-pages/ShopPageTwo";
 import { SearchParams } from "@/types/types";
-import React from "react";
 
-const ShoppageTwoWrapper = ({
+export default function ShoppageTwoWrapper({
   searchParams,
 }: {
   searchParams: SearchParams;
-}) => {
-  return (
-    <div>
-      <ShopPageTwo searchParams={searchParams} />
-    </div>
-  );
-};
-
-export default ShoppageTwoWrapper;
+}) {
+  return <ShopPageTwo searchParams={searchParams} />;
+}
